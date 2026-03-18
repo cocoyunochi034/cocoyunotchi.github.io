@@ -2,13 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>テスト</title>
+<title>配信･移動計画</title>
+
 <style>
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f5f5f5;
-    font-size: 36px; /* 全体サイズUP */
+    font-size: 18px;
   }
 
   .header {
@@ -21,13 +22,14 @@
 
   .row {
     display: grid;
-    grid-template-columns: 100px 110px 1fr 130px 1fr 70px 1fr;
+    grid-template-columns: 100px 90px 150px 1fr 70px;
     align-items: center;
     padding: 18px;
     border-bottom: 1px solid #ddd;
     background: #fff;
   }
 
+  /* 種別 */
   .type {
     padding: 10px;
     text-align: center;
@@ -40,38 +42,66 @@
     background: #e0e0e0;
   }
 
-  .test {
-    background: #ffff00;
-  }
-  
-  .ohoku {
-    background: #7777ff;
-  }
-
-  .express {
+  .exp {
     background: #c62828;
     color: #fff;
   }
 
-  .cars, .platform {
+  .ohoku {
+    background: #0000ff;
+    color: #fff;
+  }
+
+  .nons {
+    background: #0000ff;
+    color: #fff;
+  }
+
+.rema {
+  background: #fff;
+  padding: 12px 20px 16px 20px;
+  font-size: 16px;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.6;
+}
+
+
+  /* 日付・VC番号*/
+  .day, .vcno {
     font-size: 26px;
     text-align: center;
     font-weight: bold;
   }
 
+  /* ===== 時刻エリア ===== */
+  .time-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60px;
+  }
+
   .time {
-    font-size: 34px; /* 目立たせる */
+    font-size: 34px;
     font-weight: bold;
+  }
+
+  .time.delay-time {
+    color: red;
   }
 
   .delay {
     color: red;
-    font-size: 16px;
+    font-size: 20px;
   }
 
-  .destination {
-    font-size: 26px;
-    font-weight: bold;
+  /* ===== 行先･配信内容エリア ===== */
+  .dest-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60px;
   }
 
   .limited {
@@ -80,25 +110,39 @@
     font-size: 18px;
     margin-bottom: 4px;
   }
+
+  .destination {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .info {
+    font-size: 16px;
+  }
+
 </style>
 </head>
+
 <body>
 
-<div class="header"></div>
+<div class="header">配信･移動計画標</div>
 
- 
+<!-- 表示用 -->
 <div class="row">
-  <div class="type local">普通</div>
-  <div class="cars">3/28</div>
-  <div class="time">20:53</div>
-    <div class="delay">遅れ見込み</div>
-    <div class="limited">お茶の間91号</div>
-  <div>
-    <div class="destination">雑談</div>
+  <div class="type exp">共有配信</div>
+  <div class="day">03/22</div>
+  <div class="time-box">
+    <div class="time">20:53</div>
+<div class="delay"></div>
   </div>
-  <div class="platform">vc 2</div>
+  <div class="dest-box">
+    <div class="limited">お茶の間８３号</div>
+    <div class="destination">雑談</div>
+　<div class="info"></div>
+  </div>
+  <div class="vcno">vc 2</div>
 </div>
-  
+ <!--<div class="rema">備考</div>-->
 
 </body>
 </html>
