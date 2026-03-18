@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>配信時刻表</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    font-size: 18px; /* 全体サイズUP */
+  }
+
+  .header {
+    background: #333;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 110px 70px 140px 1fr 70px;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+  }
+
+  .type {
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .local {
+    background: #e0e0e0;
+  }
+
+  .test {
+    background: #e0e0e0;
+  }
+
+  .express {
+    background: #c62828;
+    color: #fff;
+  }
+
+  .cars, .platform {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .time {
+    font-size: 34px; /* 目立たせる */
+    font-weight: bold;
+  }
+
+  .delay {
+    color: red;
+    font-size: 16px;
+  }
+
+  .destination {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .limited {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header"></div>
+
+<div class="row">
+  <div class="type local">普通</div>
+  <div class="cars"></div>
+  <div>
+    <div class="time">8:20</div>
+    <div class="delay">⚠ おくれ約10分</div>
+  </div>
+  <div class="destination">中津</div>
+  <div class="platform">1</div>
+</div>
+
+<div class="row">
+  <div class="type express">特急</div>
+  <div class="cars"></div>
+  <div class="time">8:35</div>
+  <div>
+    <div class="limited">にちりん2号</div>
+    <div class="destination">大分</div>
+  </div>
+  <div class="platform">1</div>
+</div>
+
+<div class="row">
+  <div class="type local">普通</div>
+  <div class="cars"></div>
+  <div class="time">9:16</div>
+  <div class="destination">大分</div>
+  <div class="platform">3</div>
+</div>
+
+<div class="row">
+  <div class="type express">特急</div>
+  <div class="cars"></div>
+  <div class="time">9:37</div>
+  <div>
+    <div class="limited">にちりん4号</div>
+    <div class="destination">大分</div>
+  </div>
+  <div class="platform">2</div>
+</div>
+
+<div class="row">
+  <div class=""></div>
+  <div class="cars"></div>
+  <div class="time"></div>
+  <div>
+    <div class="limited"></div>
+    <div class="destination"></div>
+  </div>
+  <div class="platform"></div>
+</div>
+
+</body>
+</html>
