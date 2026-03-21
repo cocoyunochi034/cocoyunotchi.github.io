@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>配信･移動計画</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    font-size: 18px;
+  }
+
+  .header {
+    background: #333;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 100px 100px 150px 1fr 120px;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+  }
+
+  /* 種別 */
+  .type {
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .local {
+    background: #e0e0e0;
+  }
+
+  .exp {
+    background: #c62828;
+    color: #fff;
+  }
+
+  .ohoku {
+    background: #0000ff;
+    color: #fff;
+  }
+
+  .nons {
+    background: #000000;
+    color: #fff;
+  }
+
+.rema {
+  background: #fff;
+  padding: 12px 20px 16px 20px;
+  font-size: 16px;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.6;
+}
+
+
+  /* 日付・VC番号*/
+  .day, .vcno {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .server {
+    font-size: 13px;
+}
+
+  /* ===== 時刻エリア ===== */
+  .time-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60px;
+  }
+
+  .time {
+    font-size: 34px;
+    font-weight: bold;
+  }
+
+  .time.delay-time {
+    color: red;
+  }
+
+  .delay {
+    color: red;
+    font-size: 18px;
+  }
+
+  /* ===== 行先･配信内容エリア ===== */
+  .dest-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60px;
+  }
+
+  .limited {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .destination {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .info {
+    font-size: 16px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="header">移動計画標</div>
+  
+<!-- 移動用 -->
+<div class="row">
+  <div></div>
+  <div class="day"></div>
+  <div class="time-box">
+    <div class="time"></div>
+<div class="delay"></div>
+  </div>
+  <div class="dest-box">
+    <div class="limited"></div>
+    <div class="destination">準備中</div>
+　<div class="info"></div>
+  </div>
+  <div class="vcno"></div>
+</div>
+
+<div class="header">配信標</div>
+
+<!-- 配信用 -->
+<div class="row">
+  <div class="type local">普通</div>
+  <div class="day">03/22</div>
+  <div class="time-box">
+    <div class="time">21:00</div>
+<div class="delay"></div>
+  </div>
+  <div class="dest-box">
+    <div class="limited"></div>
+    <div class="destination">雑談(共有なし)</div>
+　<div class="info">PCからの画面共有なしで実施します。</div>
+  </div>
+  <div class="vcno">
+  <div class="server">さんしょくだんご</div>
+<div>vc 2</div></div>
+</div>
+
+<!-- 配信用 -->
+<div class="row">
+  <div class="type exp">共有</div>
+  <div class="day">03/28</div>
+  <div class="time-box">
+    <div class="time">21:02</div>
+<div class="delay">おくれ見込み</div>
+  </div>
+  <div class="dest-box">
+    <div class="limited">お茶の間９１号</div>
+    <div class="destination">雑談</div>
+　<div class="info"></div>
+  </div>
+  <div class="vcno">
+  <div class="server">さんしょくだんご</div>
+<div>vc 2</div></div>
+</div>
+
+</body>
+</html>
 
